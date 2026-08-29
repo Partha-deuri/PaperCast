@@ -56,11 +56,15 @@ with st.sidebar:
 
     st.divider()
     st.subheader("🔊 Audio Generation")
-    tts_engine = st.selectbox("TTS Engine", ["kokoro", "edge_tts"])
+    tts_engine = st.selectbox("TTS Engine", ["edge_tts", "kokoro"])
     
-    st.caption("Kokoro Model Files (for offline TTS)")
-    model_path = st.text_input("kokoro model path", value="kokoro-v1.0.int8.onnx", key="model_path_input")
-    voices_path = st.text_input("voices path", value="voices-v1.0.bin", key="voices_path_input")
+    model_path = None
+    voices_path = None
+    
+    if tts_engine == "kokoro":
+        st.caption("Kokoro Model Files (for offline TTS)")
+        model_path = st.text_input("kokoro model path", value="kokoro-v1.0.int8.onnx", key="model_path_input")
+        voices_path = st.text_input("voices path", value="voices-v1.0.bin", key="voices_path_input")
     
     if tts_engine == "kokoro":
         if os.path.exists(model_path) and os.path.exists(voices_path):
