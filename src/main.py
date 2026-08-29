@@ -69,7 +69,7 @@ def run(input_sources: list[str], human_in_loop: bool, audio_path: str = None):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="ArXiv Podcast Debate Generator")
+    parser = argparse.ArgumentParser(description="PaperCast")
     parser.add_argument("--inputs", nargs="+", required=True, help="1-3 arXiv IDs or local PDF file paths")
     parser.add_argument("--human-in-loop", dest="hil", action="store_true", default=False)
     parser.add_argument("--no-human-in-loop", dest="hil", action="store_false")

@@ -24,7 +24,7 @@ from src.cost_tracker import load_all_runs
 from src import config as podcast_config
 from langgraph.types import Command
 
-st.set_page_config(page_title="ArXiv Podcast Debate Generator", layout="wide")
+st.set_page_config(page_title="PaperCast", layout="wide")
 
 if "thread_id" not in st.session_state:
     st.session_state.thread_id = None

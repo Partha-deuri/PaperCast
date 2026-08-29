@@ -1,5 +1,5 @@
 """
-Shared data models for the ArXiv Podcast Debate Generator.
+Shared data models for PaperCast.
 
 These are the Pydantic schemas used both as (a) structured-output targets for
 LLM calls (so we never rely on regex-parsing free text out of a model
