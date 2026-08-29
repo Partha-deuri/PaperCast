@@ -3,6 +3,7 @@ langchain>=0.3.0
 langchain-google-genai>=2.0.0
 langchain-groq>=0.2.0
 langchain-anthropic>=0.3.0
+langchain-openai>=0.1.0
 python-dotenv>=1.0.0
 pydantic>=2.0
 tenacity>=8.0
@@ -18,4 +19,5 @@ numpy>=1.24
 chromadb>=0.5.0
 sentence-transformers>=3.0.0
 torchvision
-edge_tts
+edge-tts
+pydub
